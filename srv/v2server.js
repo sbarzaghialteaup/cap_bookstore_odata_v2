@@ -6,14 +6,14 @@ const proxy = require('@sap/cds-odata-v2-adapter-proxy')
 // config
 const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 4004
-const csn = 'csn.json'
+const csn = 'srv/csn.json'
 
 ;(async () => {
   // create new app
   const app = express()
 
   await cds.connect('db') // ensure database is connected!
-  
+
   // serve odata v4
   await cds
     .serve('AdminService')
