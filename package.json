@@ -7,7 +7,8 @@
   "dependencies": {
     "@sap/cds": "^3",
     "express": "^4",
-    "@sap/cds-odata-v2-adapter-proxy": "1.4.17"
+    "@sap/cds-odata-v2-adapter-proxy": "1.4.17",
+    "hdb": "^0.17.1"
   },
   "scripts": {
     "start": "node srv/v2server"
@@ -15,15 +16,11 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
+        "kind": "hana",
         "model": [
           "db/",
-          "srv/",
-          "app/"
-        ],
-        "credentials": {
-          "database": "my.db"
-        }
+          "srv/"
+        ]
       }
     },
     "odata": {
