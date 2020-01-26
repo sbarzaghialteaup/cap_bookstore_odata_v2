@@ -6,18 +6,24 @@
   "license": "ISC",
   "dependencies": {
     "@sap/cds": "^3",
-    "express": "^4",
-    "hdb": "^0.17.1"
+    "express": "^4"
   },
   "scripts": {
     "start": "npx cds run"
   },
   "cds": {
     "requires": {
-        "db": {
-          "kind": "hana",
-          "model": ["db","srv"]
+      "db": {
+        "kind": "sqlite",
+        "model": [
+          "db/",
+          "srv/",
+          "app/"
+        ],
+        "credentials": {
+          "database": "my.db"
         }
+      }
     }
   }
 }
