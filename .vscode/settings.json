@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "**/.gitignore": true,
+    "**/.git": true,
+    "**/.vscode": true
+  },
+  "sqltools.connections": [
+    {
+      "database": "\\\\wsl$\\Ubuntu-18.04\\home\\sbarzaghi\\prove_cap\\bookshop\\my.db",
+      "dialect": "SQLite",
+      "name": "my.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
