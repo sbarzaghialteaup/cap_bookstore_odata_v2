@@ -6,10 +6,11 @@
   "license": "ISC",
   "dependencies": {
     "@sap/cds": "^3",
-    "express": "^4"
+    "express": "^4",
+    "@sap/cds-odata-v2-adapter-proxy": "1.4.17"
   },
   "scripts": {
-    "start": "npx cds run"
+    "start": "node v2server"
   },
   "cds": {
     "requires": {
@@ -24,6 +25,9 @@
           "database": "my.db"
         }
       }
+    },
+    "odata": {
+      "version": "v4"
     }
   }
 }
